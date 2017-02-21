@@ -1,0 +1,38 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: linear-gradient(0deg, #1d1d1f, #3258ea);
+  height: 100vh;
+}
+
+.list-group.ng-scope {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.list-headline {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 300 !important;
+  color: #dadada;
+}
+
+.list-items ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list-items li {
+  font-size: 2rem;
+  list-style-type: none;
+  color: #d6d6d6;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 3em;
+  text-align: left;
+  border-bottom: 1px solid #6174ff;
+  padding: 10px 0;
+}
+

@@ -1,19 +1,22 @@
 (function() {
-	function config($locationProvider, $stateProvider) {
+	function config($stateProvider, $locationProvider, $urlRouterProvider) {
 		$locationProvider
 			.html5Mode({
 				enabled: true,
 				requreBase: false
 			});
-
+		
+		$urlRouterProvider.otherwise('/');
+		
 		$stateProvider
-			.state('firebase', {
+			.state('home', {
 				url: '/',
-				controller: 'FirebaseCtrl as firebase'
+				templateUrl: 'templates/home.html',
+				controller: 'HomeCtrl as home'
 			});
 	}
 
 	angular
-		.module('blocItOff', ['ui.router'])
+		.module('blocItOff', ['ui.router', 'firebase'])
 		.config(config);
-})();
+})();  

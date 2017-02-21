@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<section class="list-group">
+
+	<div class="list-headline">
+		<h1>Current Tasks</h1>
+	</div>
+
+	<div class="list-items">
+		<ul>
+			<li ng-repeat="item in home.list" >{{ item.$value }}</li>
+		</ul>
+	</div>
+
+</section>

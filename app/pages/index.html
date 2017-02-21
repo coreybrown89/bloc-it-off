@@ -4,26 +4,39 @@
 	    <meta charset="UTF-8">
 	    <title>Bloc Base Project</title>
 	    <link rel="stylesheet" href="/styles/style.css">
+	    <base href="/">
 	</head>
 	<body>
 
-		<div ng-controller="FirebaseCtrl as ctrl">
-			
-			<li ng-repeat="item in list | filter:name">{{ item | json }}</li>
-
-		</div>
+		
+		<ui-view></ui-view>
+		
 	    <!-- Angular -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 
 		<!-- Firebase & AngularFire -->
 		<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
 		<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
+		<script>
+			// initialize firebase
+			var config = {
+			    apiKey: "AIzaSyCCnCjjI3pa6FRw97iqccSqzAfbuqZDEc8",
+			    authDomain: "bloc-it-off-6a44a.firebaseapp.com",
+			    databaseURL: "https://bloc-it-off-6a44a.firebaseio.com",
+			    storageBucket: "bloc-it-off-6a44a.appspot.com",
+			    messagingSenderId: "92493121697"
+			  };
+			  firebase.initializeApp(config);
+
+		</script>
+
 		<!-- Main App JS -->
 		<script src="/scripts/app.js"></script>
-		<script src="/scripts/controllers/FirebaseCtrl.js"></script>
+		<script src="/scripts/services/TaskList.js"></script>
+		<script src="/scripts/controllers/HomeCtrl.js"></script>
 
 	</body>
 </html>
+ 
